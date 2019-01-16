@@ -55,7 +55,7 @@ export default class PreloaderScene extends Phaser.Scene {
 
         // Load Game Assets
         this.load.image('background', 'assets/balloon-clicker-background.png');
-        this.load.spritesheet('air-button', 'assets/air-pump-one-ss.png', {frameWidth: 128, frameHeight: 128});
+        this.load.spritesheet('air-button', 'assets/air-pump-one-ss.png', {frameWidth: 256, frameHeight: 256});
         this.load.image('balloon', 'assets/balloon.png');
         this.load.image('upgrades-button', 'assets/upgrades-button.png');
         this.load.image('shops-button', 'assets/shops-button.png');

@@ -18,28 +18,35 @@ export default class GameScene extends Phaser.Scene {
         let balloonValue = 10;
         let airCountProgress = 0;
 
+        // Background
+        this.background = this.add.graphics()
+            .fillStyle(0xc1f4ff, 1)
+            .fillRect(0, 0, 360, 470);
+        // Floor
+        const floor = this.add.graphics()
+            .fillStyle(0x333333, 1)
+            .fillRect(this.width / 2 - 180 , this.height / 2 + 150, 360, 170);
+
         // Display Loaded Assets
-        this.background = this.add.image(this.width / 2, this.height / 2, 'background').setScale(0.08);
         this.balloonIcon = this.add.image(this.width / 2 - 155, this.height / 2 - 282, 'balloon').setScale(0.04);
         this.upgradesButton = this.add.image(this.width / 2 - 140, this.height / 2 + 290, 'upgrades-button').setScale(0.05);
         this.shopsButton = this.add.image(this.width / 2 -90, this.height / 2 + 290, 'shops-button').setScale(0.07);
 
         // Air Count Box-Progress
-        const airCountBox = this.add.graphics()
-            .fillStyle(0x222222, 1)
-            .fillRect(this.width / 2 - 160, this.height / 2 + 250, 320, 10);
-        const airCountBar = this.add.graphics();
+        // const airCountBox = this.add.graphics()
+        //     .fillStyle(0x222222, 1)
+        //     .fillRect(this.width / 2 - 160, this.height / 2 + 250, 320, 10);
+        // const airCountBar = this.add.graphics();
 
         // Air Button Animation
         this.anims.create({
             key: 'pump-air',
-            frameRate: 24,
-            frames: this.anims.generateFrameNames('air-button', {start: 1, end: 10})
+            frameRate: 48,
+            frames: this.anims.generateFrameNames('air-button', {start: 1, end: 20})
         });
         
         // Air Button Logic
         this.airButton = this.add.sprite(this.width/2, this.height/1.2, 'air-button', 0)
-            .setScale(0.5)
             .setInteractive()
             .on('pointerdown', () => {
                 this.airButton.play('pump-air');
@@ -50,10 +57,10 @@ export default class GameScene extends Phaser.Scene {
                 }
                 if (airCountProgress == 320 + 320 / balloonValue) {
                     airCountProgress -= airCountProgress - 320 / balloonValue;
-                    airCountBar.clear();
+                    // airCountBar.clear();
                 }
-                airCountBar.fillStyle(0xffffff, 1);
-                airCountBar.fillRect(this.width / 2 - 160, this.height / 2 + 250, airCountProgress, 10);
+                // airCountBar.fillStyle(0xffffff, 1);
+                // airCountBar.fillRect(this.width / 2 - 160, this.height / 2 + 250, airCountProgress, 10);
                 airCount += airClick;
         });
 
