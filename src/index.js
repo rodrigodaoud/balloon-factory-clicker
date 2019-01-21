@@ -2,8 +2,8 @@ import 'phaser';
 import config from './config/config';
 import GameScene from './scenes/GameScene';
 import PreloaderScene from './scenes/PreloaderScene';
-import BootScene from './scenes/BootScene';
 import UpgradesScene from './scenes/UpgradesScene';
+import BootScene from './scenes/BootScene';
 
 class Game extends Phaser.Game {
     constructor() {

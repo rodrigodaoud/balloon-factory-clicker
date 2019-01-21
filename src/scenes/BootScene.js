@@ -6,15 +6,10 @@ export default class BootScene extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('start-button', 'assets/start-button.png');
+        this.load.image('background', 'assets/balloon-clicker-background.png');
     }
 
     create() {
-        this.startButton = this.add.image(360/2, 640/2, 'start-button')
-            .setInteractive()
-            .setScale(0.15)
-            .once('pointerup', () => {
-                this.scene.start('Preloader');
-            });
+        this.scene.start('Preloader');
     }
 }
