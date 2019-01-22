@@ -25,17 +25,18 @@ export default class PreloaderScene extends Phaser.Scene {
         });
 
         // Load Game Assets
-        this.load.image('balloon', 'assets/balloon.png');
-        this.load.image('upgrades-button', 'assets/upgrades-button.png');
-        this.load.image('shops-button', 'assets/shops-button.png');
-        this.load.image('close-button', 'assets/close-button.png');
-        this.load.image('game-scene-background', 'assets/balloon-clicker-game-scene.png');
-        this.load.image('background-click', 'assets/background-click.png');
-        this.load.spritesheet('air-button', 'assets/air-pump-one-ss.png', {frameWidth: 256, frameHeight: 256});
+        this.load.image('background-click', 'assets/game-scene/background-click.png');
+        this.load.image('balloon', 'assets/game-scene/balloon.png');
+        this.load.image('upgrades-button', 'assets/game-scene/upgrades-button.png');
+        this.load.image('center-button', 'assets/game-scene/center-button.png');
+        this.load.image('right-button', 'assets/game-scene/right-button.png');
+        this.load.image('game-scene-background', 'assets/game-scene/background-game-scene.png');
+
+        this.load.image('close-button', 'assets/upgrade-scene/close-button.png');
 
         // Placeholder
         for (let i = 0; i < 100; i++) {
-            this.load.image('upgrades-button' +i, 'assets/upgrades-button.png');
+            this.load.image('upgrades-button' +i, 'assets/game-scene/upgrades-button.png');
         }
     }
 

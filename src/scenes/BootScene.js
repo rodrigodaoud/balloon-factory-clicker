@@ -6,7 +6,7 @@ export default class BootScene extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('background', 'assets/balloon-clicker-background.png');
+        this.load.image('background', 'assets/preload-scene/balloon-clicker-background.png');
     }
 
     create() {

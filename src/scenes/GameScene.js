@@ -16,10 +16,11 @@ export default class GameScene extends Phaser.Scene {
         let airClick = 1;
 
         // Display Loaded Assets
-        this.background = this.add.image(this.width / 2, this.height / 2, 'game-scene-background').setScale(0.08);
+        this.background = this.add.image(this.width / 2, this.height / 2, 'game-scene-background').setScale(0.17);
         this.balloonIcon = this.add.image(this.width / 2 - 155, this.height / 2 - 282, 'balloon').setScale(0.04);
-        this.upgradesButton = this.add.image(this.width / 2 - 140, this.height / 2 + 290, 'upgrades-button').setScale(0.05);
-        this.shopsButton = this.add.image(this.width / 2 -90, this.height / 2 + 290, 'shops-button').setScale(0.07);
+        this.upgradesButton = this.add.image(this.width / 2 - 120, this.height / 2 + 300, 'upgrades-button').setScale(0.17);
+        this.rightButton = this.add.image(this.width / 2 + 120, this.height / 2 + 300, 'right-button').setScale(0.17);
+        this.centerButton = this.add.image(this.width / 2, this.height / 2 + 300, 'center-button').setScale(0.17);
 
         // Air Button Animation
         
